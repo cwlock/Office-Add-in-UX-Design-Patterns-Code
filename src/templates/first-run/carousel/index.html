@@ -1,0 +1,95 @@
+﻿<!-- Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See full license in root of repo. -->
+
+<!--
+    This file shows how to design a first-run experience that enables a user to page through stages of content.
+    -->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <title>Carousel</title>
+
+        <!-- For more info on Office UI Fabric, go to http://aka.ms/office-ui-fabric to learn more. -->
+        <link rel="stylesheet" href="../../../../node_modules/office-ui-fabric-js/dist/css/fabric.min.css" />
+        <link rel="stylesheet" href="../../../../node_modules/office-ui-fabric-js/dist/css/fabric.components.min.css" />
+        
+        <!-- Template styles -->
+        <link href="carousel.css" rel="stylesheet" type="text/css" />
+
+        <!-- Required JS -->
+        <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+        <script src="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.2.0/js/fabric.min.js"></script>
+    </head>
+    <body>
+        <div class="dp-carousel">
+
+            <header class="dp-carousel--skip">
+                <button id="skip" class="ms-font-m dp-carousel--skip__button">Skip <i class="ms-Icon ms-Icon--ChevronRight ms-fontSize-mi" aria-hidden="true"></i></button>
+            </header>
+
+            <section class="dp-carousel--content">
+
+                <div id="dp-slide-1" class="dp-carousel--content__slide">
+                    <img src="../../../assets/placeholderImg.png" alt="Placeholder image" />
+                    <!-- Replace h2 and p text with your own value porposition text -->
+                    <h2 class="ms-font-l">Discover new functionality</h2>
+                    <p class="ms-font-m">Enhance the user experience in your Office Add-in with Office APIs!</p>
+                </div>
+
+                <div id="dp-slide-2" class="dp-carousel--content__slide">
+                    <img src="../../../assets/placeholderImg.png" alt="Placeholder image" />
+                    <h2 class="ms-font-l">Built with Fabric JS</h2>
+                    <p class="ms-font-m">Utilize the Office UI Fabric JS library to fit seamlessly into any office application.</p>
+                </div>  
+
+                <div id="dp-slide-3" class="dp-carousel--content__slide">
+                    <img src="../../../assets/placeholderImg.png" alt="Placeholder image" />
+                    <h2 class="ms-font-l">Share files anywhere</h2>
+                    <p class="ms-font-m">All new SharePoint integration.</p>
+                </div>  
+                <!-- Add an element like the following for each addtional page. -->
+
+                <!--
+                    <div id="dp-slide-4" class="dp-carousel--content__slide">
+                        <img src="../../../assets/placeholderImg.png" alt="Placeholder image" />
+                        <h2 class="ms-font-l">Value prop text</h2>
+                        <p class="ms-font-m">More descriptive value prop text</p>
+                    </div> 
+                 -->
+
+                <button id="dp-carousel--content__button" class="ms-Button ms-Button--primary displayNone">
+                        <span class="ms-Button-label">Get started</span>
+                </button>
+
+                <div class="dp-carousel--content__sequenceIndicator" id="pageMarkers">
+                    <span id="dp-dot-1" class="dot"><i class="ms-Icon ms-Icon--CircleFill ms-fontSize-mi" aria-hidden="true"></i></span>
+                    <span id="dp-dot-2" class="dot"><i class="ms-Icon ms-Icon--CircleFill ms-fontSize-mi" aria-hidden="true"></i></span>
+                    <span id="dp-dot-3" class="dot"><i class="ms-Icon ms-Icon--CircleFill ms-fontSize-mi" aria-hidden="true"></i></span>
+                    <!-- Add an element like the following for each addtional page. -->
+                    
+                    <!-- 
+                        <span id="dp-dot-4" class="dot"><i class="ms-Icon ms-Icon--CircleFill ms-fontSize-mi" aria-hidden="true"></i></span>
+                    -->
+                </div> 
+
+                </section>
+
+                <span id="prev" class="changePage"><i class="ms-Icon ms-Icon--ChevronLeft ms-fontSize-l" aria-hidden="true"></i></span>
+                <span id="next" class="changePage"><i class="ms-Icon ms-Icon--ChevronRight ms-fontSize-l" aria-hidden="true"></i></span>
+
+        </div>
+            
+        <!-- Required JS -->
+        <script src="../../../../node_modules/jquery/dist/jquery.js"></script>
+        <script src="carousel.js"></script>
+    </body>
+</html>
+
+
+
+
+
+

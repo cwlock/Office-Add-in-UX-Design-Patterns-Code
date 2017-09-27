@@ -1,88 +1,43 @@
 ﻿@import '../../../common/common.scss';
 
-.ms-firstrun-value {
+.dp-value-placemat {
     @include flex();
     height: 100%;
 
     &__header {
-        padding: $global-spacing 0;
-        min-height: 220px;
-        max-height: 300px;
-        @include flex();
-
-        h1 {
-            letter-spacing: 5px;
-        }
-
-        p {
-            margin-top: 7px;
-        }
-    }
-
-    &__title,
-    &__subtitle {
-        padding: 0 $global-spacing;
-    }
-
-    &__logo {
-        width: 100%;
-        height: 100%;
-        flex: 1 1 0;
-        @include background-fill();
-        background-image: url('../../../../../../assets/logo-background-geometric.png');
+        min-height: 250px;
+        padding: $global-spacing $global-spacing 0;
         @include center-flex();
 
-        img {
-            height: 80px;
+        &--logo {
+            margin-bottom: 20px;
         }
     }
 
     &__content {
+        padding: 0 $global-spacing $global-spacing;
         @include center-flex();
-        height: 100%;
-        flex: 1 1 0;
-        padding: $global-spacing;
 
-        &--centered {
-            @include flex();
+        &--value {
+            text-align: center;
+            padding-bottom: $global-spacing;
+            max-width: 280px;
         }
-    }
 
-    &__list {
-        list-style-type: none;
+        &--list {
+            list-style: none;
+            max-width: 280px;
 
-        li {
-            margin-bottom: $global-spacing;
+            li {
+                padding-bottom: $global-spacing;
+                @include inline-flex(null, center);
 
-            i {
-                position: relative;
-                top: 2px;
-                margin-right: 10px;
-            }
-        }
-    }
-
-    &__action {
-        &--primary {
-            &.ms-Button {
-                align-self: center;
-                margin-top: $global-spacing;
-
-                @include inline-flex(center, center);
-
-                span.ms-Button-icon {
-                    margin-right: 0;
-                    color: $ms-fontColor-themePrimary;
-                    @include focus-states(transparent, #333333, false);
+                i {
+                    padding-right: 5px;
+                    font-size: 17px;
                 }
-
-                span.ms-Button-label {
-                    margin-right: 10px;
-                    color: $ms-fontColor-themePrimary;
-                }
-
-                @include focus-states(#eff6fc, $ms-fontColor-themePrimary, false);
             }
+            
         }
     }
 }

@@ -1,51 +1,58 @@
 ﻿<!-- Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See full license in root of repo. -->
 
-<!--
-    This file shows how to design a simple welcome page that tells users the value of the add-in.
-    -->
+<!-- 
+    This file shows how to design a simple first run experience that 
+    displays a value proposition and 3 key features of your add-in
+-->
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <title>Welcome Screen - Value Placemat</title>
+    <title>Value Placemat</title>
 
-    <!-- For the Office UI Fabric, go to http://aka.ms/office-ui-fabric to learn more. -->
-    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.min.css">
-    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css">
+    <!-- For more info on Office UI Fabric, go to http://aka.ms/office-ui-fabric to learn more. -->
+    <link rel="stylesheet" href="../../../../node_modules/office-ui-fabric-js/dist/css/fabric.min.css" />
+    <link rel="stylesheet" href="../../../../node_modules/office-ui-fabric-js/dist/css/fabric.components.min.css" />
 
     <!-- Template styles -->
-    
     <link href="value.placemat.css" rel="stylesheet" type="text/css" />
-</head>
 
+    <!-- Required JS -->
+    <script src="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.2.0/js/fabric.min.js"></script>
+</head>
 <body>
-    <main class="ms-firstrun-value">
-        <section class="ms-firstrun-value__header ms-bgColor-themePrimary">
-            <div class="ms-firstrun-value__logo">
-                <img src="/assets/logo.png" />
+    <!-- Begin Value Placemat Template -->
+    <main class="dp-value-placemat">
+        <header class="dp-value-placemat__header">
+            <div class="dp-value-placemat__header--logo">
+                <!-- Replace the image with your company logomark. We recommend a 64px by 64px png. -->
+                <img src="../../../assets/square-logo-64.png" alt="Your brand logomark"/>
             </div>
-            <div class="ms-firstrun-value__title">
-                <h1 class="ms-font-xl ms-fontWeight-light ms-fontColor-white">WELCOME</h1>
+            <div class="dp-value-placemat__header--heading">
+                <!-- Include a short welcome message -->
+                <h1 class="ms-font-su">Welcome</h1>
             </div>
-            <div class="ms-firstrun-value__subtitle ms-font-m ms-fontWeight-light ms-fontColor-white">
-                <p>This add-in helps you be productive at work!</p>
+        </header>
+        <section class="dp-value-placemat__content">
+            <div class="dp-value-placemat__content--value">
+                <!-- Describe the value of your add-in -->
+                <p class="ms-font-xl">Discover what this add-in can do for you today!</p>
             </div>
-        </section>
-        <section class="ms-firstrun-value__content">
-            <div class="ms-font-m ms-fontColor-themePrimary ms-firstrun-value__content--centered">
-                <ul class="ms-firstrun-value__list ms-fontWeight-regular">
-                    <li><span><i class="ms-Icon enlarge ms-Icon--coffee"></i>Helps you produce fast</span></li>
-                    <li><span><i class="ms-Icon enlarge ms-Icon--ribbon"></i>Adds value to your work</span></li>
-                    <li><span><i class="ms-Icon enlarge ms-Icon--glasses"></i>Enables you to be creative</span></li>
-                </ul>
-                <button class="ms-firstrun-value__action--primary ms-bgColor-themePrimary ms-Button ms-Button--command ms-fontColor-white ms-font-m">
-                    <span class="ms-Button-label">Get Started!</span>
-                    <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--chevronThickRight"></i></span>
-                </button>
-            </div>
+            <!-- Provide a list of the key feautres within your add-in -->
+            <ul class="dp-value-placemat__content--list ms-font-m">
+                <li><i class="ms-Icon ms-Icon--Ribbon" aria-hidden="true"></i><span>Achieve more with Office integration</span></li>
+                <li><i class="ms-Icon ms-Icon--Unlock" aria-hidden="true"></i><span>Unlock features and functionality</span></li>
+                <li><i class="ms-Icon ms-Icon--Design" aria-hidden="true"></i><span>Create and visualize like a pro</span></li>
+            </ul>
+            <button class="ms-Button ms-Button--primary">
+                <span class="ms-Button-label">Get started!</span> 
+            </button>
         </section>
     </main>
+    <!-- End Value Placemat Template -->
+    <!-- Required JS -->
+    <script src="value.placemat.js"></script>
 </body>
 </html>

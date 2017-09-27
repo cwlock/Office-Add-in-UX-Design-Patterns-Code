@@ -1,0 +1,81 @@
+﻿@import '../../../common/common.scss';
+
+.dp-carousel {
+    height: 100%;
+    text-align: center;
+    position: relative;
+    
+    &--skip {
+        height: 44px;
+        @include inline-flex(flex-end);
+    }
+
+    #skip {
+        background: none repeat scroll 0 0 transparent;
+        border: 0px none;  
+        line-height: 1;
+        cursor: pointer;
+        margin-right: 20px;
+        padding: 0;
+    }
+
+    &--content {
+        position: relative;
+
+        img {
+            margin-top: 20px;
+            max-width: 320px;
+        }
+
+        h2 {
+            padding: 0 20px;
+            margin: 70px auto 0;
+            max-width: 280px;
+        }
+
+        p {
+            padding: 0 20px;
+            margin: 20px auto 0;
+            max-width: 280px;
+        }
+
+        &__sequenceIndicator {
+            display: block !important;
+            margin-top: 30px;
+        }
+    }
+
+    #prev, #next {
+        background-color: #9b9b9b;
+        color: #fff;
+        padding: 14px 4px 10px;
+        cursor: pointer;
+        transition: 0.6s ease;
+        position: absolute;
+        top: 25%;
+    }
+
+    #prev:hover, #next:hover {
+        background-color: #333;
+    }
+
+    #prev {
+        left: 0;
+    }
+
+    #next {
+        right: 0;
+    }
+}
+
+.displayNone {
+    display: none;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.ms-Button {
+    margin-top: 40px;
+}
